@@ -4,6 +4,9 @@ var max_size = 10;
 var min_speed = -2;
 var max_speed = 2;
 
+var max_dist = 400;
+var max_face_dist = 300;
+
 var points_list = [];
 var canvas;
 
@@ -49,8 +52,8 @@ function draw() {
 	for (let i = 0;i < max_points;i++)
 		for (let j = i;j < max_points;j++) {
 			let tmp_d = dist(points_list[i].x, points_list[i].y, points_list[j].x, points_list[j].y);
-			if (tmp_d < 600) {
-				let tmp_c = color(255, 255, 255, -tmp_d + 600);
+			if (tmp_d < max_dist) {
+				let tmp_c = color(255, 255, 255, -tmp_d + max_dist);
 				stroke(tmp_c);
 				strokeWeight((points_list[i].s + points_list[j].s) / 16);
 				line(points_list[i].x, points_list[i].y, points_list[j].x, points_list[j].y);
@@ -62,8 +65,8 @@ function draw() {
 				let tmp_di = dist(points_list[i].x, points_list[i].y, points_list[j].x, points_list[j].y);
 				let tmp_dj = dist(points_list[j].x, points_list[j].y, points_list[k].x, points_list[k].y);
 				let tmp_dk = dist(points_list[i].x, points_list[i].y, points_list[k].x, points_list[k].y);
-				if (tmp_di < 500 && tmp_dj < 500 && tmp_dk < 500) {
-					let tmp_c = color(6, 102, 131, (-((tmp_di + tmp_dj + tmp_dk) / 3) + 255) / 2);
+				if (tmp_di < max_face_dist && tmp_dj < max_face_dist && tmp_dk < max_face_dist) {
+					let tmp_c = color(6, 102, 131, (-((tmp_di + tmp_dj + tmp_dk) / 3) + max_face_dist) / 2);
 					fill(tmp_c);
 					noStroke();
 					triangle(points_list[i].x, points_list[i].y,
