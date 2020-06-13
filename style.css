@@ -26,10 +26,13 @@ canvas {
     text-align: center;
     font-size: 250px;
     margin-top: calc(50vh - 200px);
+    margin-bottom: 20vh;
     font-family: 'Jetbrains Mono';
 }
 
 .tmp_div {
     background-color: #ffffff52;
     width: 100%;
+    height: 30vh;
+    text-align: center;
 }
