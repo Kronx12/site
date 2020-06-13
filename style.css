@@ -1,10 +1,10 @@
-@import url("./jetbrains-mono.extrabold-extbd.ttf");
+@import url("./font/jetbrains-mono.extrabold-extbd.ttf");
 
 @font-face {
     font-family: 'Jetbrains Mono';
     font-style: bold;
     font-weight: 400;
-    src: url("./jetbrains-mono.extrabold-extbd.ttf") format('tff');
+    src: url("./font/jetbrains-mono.extrabold-extbd.ttf") format('tff');
 }
 
 html, body {
