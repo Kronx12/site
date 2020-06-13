@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf-8" />
+		<script src="sketch.js"></script>
+	</head>
+	<script>
+		var x = setInterval(function() {
+			var now = new Date().getTime();
+			var hours = Math.floor((now % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((now % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((now % (1000 * 60)) / 1000);
+			document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
+		}, 1000);
+		</script>
+	<body>
+		<div id="time" class="main">00:00:00</div>
+		<!--<div class="tmp_div">TEST</div>-->
+	</body>
+</html>

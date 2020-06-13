@@ -1,0 +1,35 @@
+@import url("./jetbrains-mono.extrabold-extbd.ttf");
+
+@font-face {
+    font-family: 'Jetbrains Mono';
+    font-style: bold;
+    font-weight: 400;
+    src: url("./jetbrains-mono.extrabold-extbd.ttf") format('tff');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+    position:fixed;
+    top:0;
+    left:0;
+}
+  
+.main {
+    width: 100%;
+    color: #00c3ff;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 250px;
+    margin-top: calc(50vh - 200px);
+    font-family: 'Jetbrains Mono';
+}
+
+.tmp_div {
+    background-color: #ffffff52;
+    width: 100%;
+}
